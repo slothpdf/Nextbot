@@ -5,7 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerControls : MonoBehaviour
 {
-    public float speed = 6.0f;
+    public float walkSpeed = 6.0f;
+    public float runSpeed = 12.0f; // Speed when running
+    private float speed; // Current speed (either walk or run)
     public float gravity = -9.8f;
 
     public enum RotationAxes
@@ -33,10 +35,24 @@ public class PlayerControls : MonoBehaviour
         {
             body.freezeRotation = true;
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        speed = walkSpeed; // Start with walk speed
     }
 
     void Update()
     {
+        // Toggle running with Left Shift
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = runSpeed;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = walkSpeed;
+        }
+
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
         Vector3 movement = new Vector3(deltaZ, 0, -deltaX);
@@ -67,6 +83,15 @@ public class PlayerControls : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(0, horizontalRot, 0);
             Camera.main.transform.localEulerAngles = new Vector3(verticalRot, Camera.main.transform.localEulerAngles.y, 0);
+        }
+
+        // Reset mouse position to the center of the screen
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
