@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerJump : MonoBehaviour
 {
-    public float baseJumpHeight = 10.0f;
-    public float gravity = -17.0f;
+    public float baseJumpHeight = 12.0f;
+    public float gravity = -18.0f;
 
     private CharacterController charController;
     private float verticalSpeed;
@@ -32,9 +32,8 @@ public class PlayerJump : MonoBehaviour
         else
         {
             float slopeAngle = Vector3.Angle(Vector3.up, charController.transform.forward);
-            float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f); // Use 45 degrees as the limit
+            float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f); 
 
-            // Adjust gravity based on slope angle
             float slopeGravity = Mathf.Lerp(gravity, gravity * 2f, slopeMultiplier);
             verticalSpeed += slopeGravity * Time.deltaTime;
         }
@@ -46,7 +45,7 @@ public class PlayerJump : MonoBehaviour
     float CalculateJumpHeight()
     {
         float slopeAngle = Vector3.Angle(Vector3.up, charController.transform.forward);
-        float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f); // Use 45 degrees as the limit
+        float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f); 
         return baseJumpHeight / slopeMultiplier;
     }
 }

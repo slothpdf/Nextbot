@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerControls : MonoBehaviour
 {
-    public float walkSpeed = 6.0f;
-    public float runSpeed = 12.0f; // Speed when running
+    public float walkSpeed = 17f;
+    public float runSpeed = 30f; // Speed when running
     private float speed; // Current speed (either walk or run)
     public float gravity = -9.8f;
 
@@ -38,12 +38,12 @@ public class PlayerControls : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        speed = walkSpeed; // Start with walk speed
+        speed = walkSpeed; //walking
     }
 
     void Update()
     {
-        // Toggle running with Left Shift
+        
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed = runSpeed;
