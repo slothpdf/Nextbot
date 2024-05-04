@@ -49,6 +49,3 @@ public class PlayerJump : MonoBehaviour
         return baseJumpHeight / slopeMultiplier;
     }
 }
-
-
-
