@@ -69,7 +69,7 @@ public class PlayerControls : MonoBehaviour
 
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
-        Vector3 movement = new Vector3(deltaZ, 0, -deltaX);
+        Vector3 movement = new Vector3(-deltaZ, 0, deltaX);
         movement = Vector3.ClampMagnitude(movement, speed);
         movement.y = gravity;
         movement *= Time.deltaTime;
