@@ -1,26 +1,23 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
-public class DoorOpener : MonoBehaviour
+public class DoorRotator : MonoBehaviour
 {
-    public float openSpeed = 2f; // The speed at which the door opens
-    public Vector3 targetPosition; // Final position of the door when opened
-    public Quaternion targetRotation; // Final rotation of the door when opened
+    public float rotationSpeed = 180f; // The speed at which the door rotates (degrees per second)
+    public bool rotateClockwise = true; // True for clockwise rotation, false for counterclockwise
 
-    private Vector3 initialPosition;
+    private bool isOpen = false;
+    private bool isRotating = false;
     private Quaternion initialRotation;
-    private bool isOpening = false;
 
     private void Start()
     {
-        initialPosition = transform.position;
         initialRotation = transform.rotation;
     }
 
     private void Update()
     {
-        // Check if the player clicks on the door
-        if (Input.GetMouseButtonDown(0) && isOpening == false)
+        if (Input.GetMouseButtonDown(0) && !isRotating)
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -29,25 +26,25 @@ public class DoorOpener : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    isOpening = true;
-                    StartCoroutine(OpenDoor());
+                    isRotating = true;
+                    Quaternion startRotation = transform.rotation;
+                    Quaternion endRotation = isOpen ? initialRotation : initialRotation * Quaternion.Euler(Vector3.up * (rotateClockwise ? 90f : -90f));
+                    StartCoroutine(RotateCoroutine(startRotation, endRotation));
                 }
             }
         }
     }
 
-    private IEnumerator OpenDoor()
+    private IEnumerator RotateCoroutine(Quaternion startRotation, Quaternion endRotation)
     {
         float t = 0f;
-        Quaternion initialDoorRotation = transform.rotation;
-
         while (t < 1f)
         {
-            t += Time.deltaTime * openSpeed;
-            transform.position = Vector3.Lerp(initialPosition, targetPosition, t);
-            transform.rotation = Quaternion.Slerp(initialDoorRotation, targetRotation, t);
+            t += Time.deltaTime * (rotationSpeed / 90f); // Normalize speed relative to 90 degrees
+            transform.rotation = Quaternion.Slerp(startRotation, endRotation, t);
             yield return null;
         }
-        isOpening = false;
+        isOpen = !isOpen;
+        isRotating = false;
     }
 }
