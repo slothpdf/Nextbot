@@ -1983,8 +1983,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 301.1988, y: 318.2241, z: 1762.993}
-  targetRotation: {x: 0, y: 251.128, z: 0, w: -170}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &41350244 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 196434, guid: 76221aed845c98e4482cc2856cc7257d, type: 3}
@@ -20099,8 +20101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 489.9865, y: 318.5346, z: 1271.423}
-  targetRotation: {x: 0.001, y: 136.311, z: 0.001, w: 0}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &381571935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22894,8 +22898,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 287.8271, y: 318.2241, z: 1798.605}
-  targetRotation: {x: 0, y: 69.353, z: 0, w: 100}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &421107500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36937,8 +36943,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 223.9408, y: 320.7246, z: 1603.216}
-  targetRotation: {x: 0, y: -180, z: 0, w: 0}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &708907337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44277,8 +44285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 683.6408, y: 318.5846, z: 1532.483}
-  targetRotation: {x: 0.0001, y: 5.241, z: 0.0001, w: 5.421}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &871305145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
@@ -51222,8 +51232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 313.9956, y: 318.2241, z: 1463.357}
-  targetRotation: {x: 0, y: -70, z: 0, w: 55}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1017274019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57564,8 +57576,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 171.9358, y: 321.3386, z: 1615.906}
-  targetRotation: {x: 0, y: 0, z: 0, w: 100}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1127022149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 196434, guid: 76221aed845c98e4482cc2856cc7257d, type: 3}
@@ -60644,8 +60658,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 223.9408, y: 320.7336, z: 1595.671}
-  targetRotation: {x: 0, y: 0, z: 0, w: 100}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1187144551 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 196434, guid: 76221aed845c98e4482cc2856cc7257d, type: 3}
@@ -67807,8 +67823,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.5
-  targetPosition: {x: 674.0818, y: 318.5346, z: 1253.238}
-  targetRotation: {x: 0.0001, y: -35.64, z: 0.0001, w: -35.64}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1397446539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87456,8 +87474,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 481.9236, y: 318.5346, z: 1278.979}
-  targetRotation: {x: 0.0001, y: 133.101, z: 0.0001, w: 0}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &1821926991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
@@ -88757,8 +88777,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.5
-  targetPosition: {x: 681.0478, y: 318.5346, z: 1261.816}
-  targetRotation: {x: 0.0001, y: -33.061, z: 0.0001, w: -33.061}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1847338862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88978,8 +89000,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 682.5229, y: 318.5846, z: 1521.49}
-  targetRotation: {x: 0.0001, y: 10.179, z: 0.0001, w: 10.179}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &1850817083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
@@ -90722,15 +90746,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90738,7 +90762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 314.82
+      value: 318.7
       objectReference: {fileID: 0}
     - target: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
       propertyPath: m_LocalPosition.z
@@ -101700,8 +101724,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 0.6
-  targetPosition: {x: 306.443, y: 318.2266, z: 1500.64}
-  targetRotation: {x: 0.0001, y: 65, z: 0.0001, w: 80}
+  targetOpenPosition: {x: 0, y: 0, z: 0}
+  targetOpenRotation: {x: 0, y: 0, z: 0, w: 0}
+  targetClosedPosition: {x: 0, y: 0, z: 0}
+  targetClosedRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &2065898393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495364, guid: 2c33c759b6bfb1448a79429a0c761b44, type: 3}
