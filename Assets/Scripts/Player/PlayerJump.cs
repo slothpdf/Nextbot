@@ -17,22 +17,17 @@ public class PlayerJump : MonoBehaviour
         verticalSpeed = 0.0f;
     }
 
+    public void Jump()
+    {
+        verticalSpeed = Mathf.Sqrt(2 * CalculateJumpHeight() * -gravity);
+    }
+
     void Update()
     {
-        if (charController.isGrounded)
-        {
-            verticalSpeed = -gravity * Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                float jumpForce = Mathf.Sqrt(2 * CalculateJumpHeight() * -gravity);
-                verticalSpeed = jumpForce;
-            }
-        }
-        else
+        if (!charController.isGrounded)
         {
             float slopeAngle = Vector3.Angle(Vector3.up, charController.transform.forward);
-            float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f); 
+            float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f);
 
             float slopeGravity = Mathf.Lerp(gravity, gravity * 2f, slopeMultiplier);
             verticalSpeed += slopeGravity * Time.deltaTime;
@@ -45,7 +40,8 @@ public class PlayerJump : MonoBehaviour
     float CalculateJumpHeight()
     {
         float slopeAngle = Vector3.Angle(Vector3.up, charController.transform.forward);
-        float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f); 
+        float slopeMultiplier = Mathf.Clamp01(slopeAngle / 45f);
         return baseJumpHeight / slopeMultiplier;
     }
 }
+

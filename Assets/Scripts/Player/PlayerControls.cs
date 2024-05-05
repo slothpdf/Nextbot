@@ -26,10 +26,17 @@ public class PlayerControls : MonoBehaviour
 
     private float verticalRot = 0;
     private CharacterController charController;
+    private PlayerJump playerJump;
+
+    private bool isRunning = false;
+    private int jumpCount = 0; // Number of jumps
+    private int maxJumpCount = 4; // Maximum number of jumps
 
     void Start()
     {
         charController = GetComponent<CharacterController>();
+        playerJump = GetComponent<PlayerJump>();
+
         Rigidbody body = GetComponent<Rigidbody>();
         if (body != null)
         {
@@ -43,13 +50,20 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-        
+        // Jump logic
+        if (charController.isGrounded)
+        {
+            jumpCount = 0; // Reset jump count when grounded
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            isRunning = true;
             speed = runSpeed;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
+            isRunning = false;
             speed = walkSpeed;
         }
 
@@ -62,6 +76,7 @@ public class PlayerControls : MonoBehaviour
         movement = transform.TransformDirection(movement);
         charController.Move(movement);
 
+        // Rotation logic
         if (axes == RotationAxes.MouseX)
         {
             transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
@@ -92,6 +107,21 @@ public class PlayerControls : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+
+        // Player momentum logic
+        if (charController.isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (jumpCount < maxJumpCount)
+            {
+                playerJump.Jump();
+                if (isRunning && speed < runSpeed + (maxJumpCount - 1) * 5) // Check if speed is less than the maximum possible speed
+                {
+                    speed += 5; // Increase speed by 10 after each jump when running
+                }
+                jumpCount++;
+                Debug.Log("Speed: " + speed);
+            }
         }
     }
 }
