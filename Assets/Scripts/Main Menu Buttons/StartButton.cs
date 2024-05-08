@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public int gameScene;
-
     public void StartGame() {
-        SceneManager.LoadScene(gameScene);
+        SceneManager.LoadScene("world");
     }
 }
