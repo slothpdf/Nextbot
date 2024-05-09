@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour {
 
     private void Start() {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update() {
