@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
@@ -21,6 +22,10 @@ public class GameLogic : MonoBehaviour
     void Update()
     {
         counter.GetComponent<Text>().text = pageCount + "/8";
+        if (pageCount == 8)
+        {
+            SceneManager.LoadScene("VictoryScreen");
+        }
 
     }
 }
