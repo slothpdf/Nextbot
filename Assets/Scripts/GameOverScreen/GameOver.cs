@@ -6,7 +6,6 @@ public class GameOver : MonoBehaviour {
     public NextbotAI nextBotAI;
 
     private void Start() {
-        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
