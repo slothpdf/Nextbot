@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class NextbotAI : MonoBehaviour {
@@ -11,6 +13,12 @@ public class NextbotAI : MonoBehaviour {
     public float collisionDistance = 1.0f; // distance to trigger collision with player
     public float obstacleRange = 5.0f; // distance from obstacles where nextbot will turn 
     public bool playerAlive = true;
+
+    private NavMeshAgent agent;
+
+    private void Awake() {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     private void Update() {
         // checks if player is within follow distance

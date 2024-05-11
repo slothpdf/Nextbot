@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8005264858811251827}
   - component: {fileID: 6985141540242344523}
   - component: {fileID: 9188370650378216139}
+  - component: {fileID: -8341983608606543571}
   m_Layer: 0
   m_Name: drake
   m_TagString: Untagged
@@ -98,7 +99,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 196ab1974fbd22b4e8e5663aa49de72e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -107,7 +108,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 150
+  MaxDistance: 125
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -201,3 +202,25 @@ MonoBehaviour:
   collisionDistance: 1
   obstacleRange: 10
   playerAlive: 1
+--- !u!195 &-8341983608606543571
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6246409429476184504}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 3.2
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 11.36
+  m_BaseOffset: 5.68
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
