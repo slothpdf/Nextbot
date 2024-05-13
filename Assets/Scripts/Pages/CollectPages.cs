@@ -23,7 +23,7 @@ public class CollectPages : MonoBehaviour
         page = this.gameObject;
 
         gameLogic = GameObject.FindWithTag("GameLogic");
-        
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -46,7 +46,7 @@ public class CollectPages : MonoBehaviour
 
     void Update()
     {
-        if(inReach && Input.GetButtonDown("pickup"))
+        if (inReach && Input.GetButtonDown("pickup"))
         {
             gameLogic.GetComponent<GameLogic>().pageCount += 1;
             collectSound.Play();
@@ -55,6 +55,6 @@ public class CollectPages : MonoBehaviour
             inReach = false;
         }
 
-        
+
     }
 }

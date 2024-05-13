@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 56642113}
   - component: {fileID: 56642115}
   - component: {fileID: 56642114}
+  - component: {fileID: 56642116}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -292,6 +293,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56642112}
   m_CullTransparentMesh: 1
+--- !u!114 &56642116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56642112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc33e25ba0e5c4f95bd129692278cd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 1998054662}
+  soundSlider: {fileID: 1159930520}
+  masterMixer: {fileID: 24100000, guid: 7824b728902f4834e84937879d284d1f, type: 2}
 --- !u!1 &104131606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,10 +1660,10 @@ AudioSource:
   m_GameObject: {fileID: 941277971}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 7824b728902f4834e84937879d284d1f, type: 2}
   m_audioClip: {fileID: 8300000, guid: d234c244c09ae534bba7ffcb1077fc45, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.53
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1890,7 +1906,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1159930518}
   - component: {fileID: 1159930520}
-  - component: {fileID: 1159930519}
   m_Layer: 5
   m_Name: Volume Slider
   m_TagString: Untagged
@@ -1922,19 +1937,6 @@ RectTransform:
   m_AnchoredPosition: {x: 126, y: 2}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1159930519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159930517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc33e25ba0e5c4f95bd129692278cd30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberText: {fileID: 1998054662}
 --- !u!114 &1159930520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1982,14 +1984,14 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1159930519}
+      - m_Target: {fileID: 56642116}
         m_TargetAssemblyTypeName: TextSlider, Assembly-CSharp
-        m_MethodName: SetNumbertext
-        m_Mode: 0
+        m_MethodName: SetVolumeFromSlider
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
